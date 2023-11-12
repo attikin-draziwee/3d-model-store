@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Реестр</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="sidebars.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-light">
+    <div class="wrapper container-fluid nopadding">
+      <header class="header container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">3D Реестр</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/"
+                    >Главная</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Добавить модель</a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Поиск по именованию"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Найти
+                </button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section class="page container-fluid nopadding">
+        <aside
+          class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark"
+          style="width: 280px"
+        >
+          <a
+            href="/"
+            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+          >
+            <svg class="bi me-2" width="40" height="32">
+              <use xlink:href="#bootstrap" />
+            </svg>
+            <span class="fs-4">Поиск</span>
+          </a>
+          <hr />
+          <ul class="list-group">
+            <li class="list-group-item">
+              По именованию
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Модель"
+                  aria-describedby="basic-addon1"
+                />
+              </div>
+            </li>
+            <li class="list-group-item">
+              По дате
+              <ul class="list-group">
+                <li class="list-group-item nopadding">
+                  <button
+                    class="btn btn-default fullwidth text-start"
+                    type="button"
+                  >
+                    Новые
+                  </button>
+                </li>
+                <li class="list-group-item nopadding">
+                  <button
+                    class="btn btn-default fullwidth text-start"
+                    type="button"
+                  >
+                    Старые
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              По категории
+              <ul class="list-group">
+                <li class="list-group-item nopadding">
+                  <button
+                    class="btn btn-default fullwidth text-start"
+                    type="button"
+                  >
+                    Лабораторные
+                  </button>
+                </li>
+                <li class="list-group-item nopadding">
+                  <button
+                    class="btn btn-default fullwidth text-start"
+                    type="button"
+                  >
+                    Автомобильные
+                  </button>
+                </li>
+                <li class="list-group-item nopadding">
+                  <button
+                    class="btn btn-default fullwidth text-start"
+                    type="button"
+                  >
+                    Буровые установки
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              По типу полимера
+              <ul class="list-group">
+                <li class="list-group-item nopadding">
+                  <button
+                    class="btn btn-default fullwidth text-start"
+                    type="button"
+                  >
+                    АБС
+                  </button>
+                </li>
+                <li class="list-group-item nopadding">
+                  <button
+                    class="btn btn-default fullwidth text-start"
+                    type="button"
+                  >
+                    ПЛА
+                  </button>
+                </li>
+                <li class="list-group-item nopadding">
+                  <button
+                    class="btn btn-default fullwidth text-start"
+                    type="button"
+                  >
+                    ПЭТГ
+                  </button>
+                </li>
+                <li class="list-group-item nopadding">
+                  <button
+                    class="btn btn-default fullwidth text-start"
+                    type="button"
+                  >
+                    Нейлон
+                  </button>
+                </li>
+                <li class="list-group-item nopadding">
+                  <button
+                    class="btn btn-default fullwidth text-start"
+                    type="button"
+                  >
+                    ТПУ
+                  </button>
+                </li>
+                <li class="list-group-item nopadding">
+                  <button
+                    class="btn btn-default fullwidth text-start"
+                    type="button"
+                  >
+                    ПВС
+                  </button>
+                </li>
+                <li class="list-group-item nopadding">
+                  <button
+                    class="btn btn-default fullwidth text-start"
+                    type="button"
+                  >
+                    Ударопрочный полистирол
+                  </button>
+                </li>
+                <li class="list-group-item nopadding">
+                  <button
+                    class="btn btn-default fullwidth text-start"
+                    type="button"
+                  >
+                    Композитные материалы
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <hr />
+        </aside>
+        <section class="main container-fluid bg-light nopadding">
+          <main class="content container-fluid nopadding">
+            <header class="header container-fluid">
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <h3 class="text text-nowrap text-body">Поиск: Общие</h3>
+                <div class="container-fluid justify-content-end">
+                  <form class="filter d-flex">
+                    <p class="fw-bold text-body text-center">Фильтр</p>
+                    <ul class="filter__list">
+                      <li class="filter__item">
+                        <button type="button" class="btn btn-outline-primary">
+                          Имя (А-Я)
+                        </button>
+                      </li>
+                      <li class="filter__item">
+                        <button type="button" class="btn btn-outline-primary">
+                          Дата (Новые-Старые)
+                        </button>
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+              </nav>
+            </header>
+            <ul class="card__list p-3">
+              <li class="card__item bg-white shadow">
+                <div class="card__content p-3">
+                  <img src="./img/models/model-1.png" class="card__img" />
+                  <div class="card__meta">
+                    <div class="card__text">
+                      <h3>Название: Модель 1</h3>
+                      <ul class="card-info__list">
+                        <li class="card-info__item">
+                          Дата добавления: 20.02.2000
+                        </li>
+                        <li class="card-info__item">Категория: Лабораторные</li>
+                        <li class="card-info__item">Последняя версия: 3v</li>
+                        <li class="card-info__item">Тип полимера: ПЛА</li>
+                      </ul>
+                    </div>
+                    <a
+                      type="button"
+                      class="btn btn-primary btn-lg"
+                      href="./model_1.html"
+                    >
+                      Открыть
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="card__item bg-white shadow">
+                <div class="card__content p-3">
+                  <img src="./img/models/model-2.png" class="card__img" />
+                  <div class="card__meta">
+                    <div class="card__text">
+                      <h3>Название: Модель 2</h3>
+                      <ul class="card-info__list">
+                        <li class="card-info__item">
+                          Дата добавления: 19.03.2001
+                        </li>
+                        <li class="card-info__item">Категория: Лабораторные</li>
+                        <li class="card-info__item">Последняя версия: 3v</li>
+                        <li class="card-info__item">Тип полимера: ПЛА</li>
+                      </ul>
+                    </div>
+                    <a
+                      type="button"
+                      class="btn btn-primary btn-lg"
+                      href="./model_2.html"
+                    >
+                      Открыть
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="card__item bg-white shadow">
+                <div class="card__content p-3">
+                  <img src="./img/models/model-3.png" class="card__img" />
+                  <div class="card__meta">
+                    <div class="card__text">
+                      <h3>Название: Модель 3</h3>
+                      <ul class="card-info__list">
+                        <li class="card-info__item">
+                          Дата добавления: 25.06.2004
+                        </li>
+                        <li class="card-info__item">Категория: Лабораторные</li>
+                        <li class="card-info__item">Последняя версия: 3v</li>
+                        <li class="card-info__item">Тип полимера: ПЛА</li>
+                      </ul>
+                    </div>
+                    <a
+                      type="button"
+                      class="btn btn-primary btn-lg"
+                      href="./model_3.html"
+                    >
+                      Открыть
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="card__item bg-white shadow">
+                <div class="card__content p-3">
+                  <img src="./img/models/model-4.png" class="card__img" />
+                  <div class="card__meta">
+                    <div class="card__text">
+                      <h3>Название: Модель 4</h3>
+                      <ul class="card-info__list">
+                        <li class="card-info__item">
+                          Дата добавления: 10.01.2019
+                        </li>
+                        <li class="card-info__item">Категория: Лабораторные</li>
+                        <li class="card-info__item">Последняя версия: 3v</li>
+                        <li class="card-info__item">Тип полимера: ПЛА</li>
+                      </ul>
+                    </div>
+                    <a
+                      type="button"
+                      class="btn btn-primary btn-lg"
+                      href="./model_4.html"
+                    >
+                      Открыть
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="card__item bg-white shadow">
+                <div class="card__content p-3">
+                  <img src="./img/models/model-5.png" class="card__img" />
+                  <div class="card__meta">
+                    <div class="card__text">
+                      <h3>Название: Модель 5</h3>
+                      <ul class="card-info__list">
+                        <li class="card-info__item">
+                          Дата добавления: 16.05.2020
+                        </li>
+                        <li class="card-info__item">Категория: Лабораторные</li>
+                        <li class="card-info__item">Последняя версия: 3v</li>
+                        <li class="card-info__item">Тип полимера: ПЛА</li>
+                      </ul>
+                    </div>
+                    <a
+                      type="button"
+                      class="btn btn-primary btn-lg"
+                      href="model_5.html"
+                    >
+                      Открыть
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="card__item bg-white shadow">
+                <div class="card__content p-3">
+                  <img src="./img/models/model-6.png" class="card__img" />
+                  <div class="card__meta">
+                    <div class="card__text">
+                      <h3>Название: Модель 6</h3>
+                      <ul class="card-info__list">
+                        <li class="card-info__item">
+                          Дата добавления: 16.05.2020
+                        </li>
+                        <li class="card-info__item">Категория: Лабораторные</li>
+                        <li class="card-info__item">Последняя версия: 3v</li>
+                        <li class="card-info__item">Тип полимера: ПЛА</li>
+                      </ul>
+                    </div>
+                    <a
+                      type="button"
+                      class="btn btn-primary btn-lg"
+                      href="model_6.html"
+                    >
+                      Открыть
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="card__item bg-white shadow">
+                <div class="card__content p-3">
+                  <img src="./img/models/model-7.png" class="card__img" />
+                  <div class="card__meta">
+                    <div class="card__text">
+                      <h3>Название: Модель 7</h3>
+                      <ul class="card-info__list">
+                        <li class="card-info__item">
+                          Дата добавления: 16.05.2020
+                        </li>
+                        <li class="card-info__item">Категория: Лабораторные</li>
+                        <li class="card-info__item">Последняя версия: 3v</li>
+                        <li class="card-info__item">Тип полимера: ПЛА</li>
+                      </ul>
+                    </div>
+                    <a
+                      type="button"
+                      class="btn btn-primary btn-lg"
+                      href="model_7.html"
+                    >
+                      Открыть
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </main>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+        </section>
+      </section>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="sidebars.js"></script>
+  </body>
+</html>
