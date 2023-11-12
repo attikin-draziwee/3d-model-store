@@ -6,6 +6,10 @@ ul {
   list-style: none;
 }
 
+.wrapper {
+  height: inherit;
+}
+
 .nopadding {
   padding: 0 !important;
   margin: 0 !important;
@@ -20,17 +24,20 @@ ul {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
+  height: fit-content;
 }
 
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: fit-content;
 }
 
 .content {
   display: flex;
   flex-direction: column;
+  height: auto;
 }
 
 .filter {
